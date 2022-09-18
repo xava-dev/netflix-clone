@@ -6,9 +6,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Netflix</title>
+        <title>Home - Netflix</title>
         <meta name="description" content="NNetflix clone built with Next JS" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/netflix-favicon.svg" />
       </Head>
       <main>
         <Header />
