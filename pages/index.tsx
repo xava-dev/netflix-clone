@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <meta name="description" content="NNetflix clone built with Next JS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-16">
+      <main>
         <Header />
       </main>
     </>

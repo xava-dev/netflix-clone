@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <nav className="my-6 text-white flex flex-row w-full">
+      <nav className="px-16 py-6 text-white flex flex-row w-full bg-netflixBackground">
         <ul className="flex flex-row text-sm font-light">
           <li className="mr-10">
             <Link href="/">
