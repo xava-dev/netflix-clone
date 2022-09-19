@@ -68,6 +68,11 @@ export default function Navbar() {
                 <li className="my-2">
                   <a className="hover:text-gray-400 transition-all">My List</a>
                 </li>
+                <li className="my-2">
+                  <a className="hover:text-gray-400 transition-all">
+                    Browse by Languages
+                  </a>
+                </li>
               </ul>
             </div>
           </li>
@@ -80,30 +85,37 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="mr-6 hidden lg:inline-block">
-            <Link href="/series">
+            <Link href="/">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 Series
               </a>
             </Link>
           </li>
           <li className="mr-6 hidden lg:inline-block">
-            <Link href="/films">
+            <Link href="/">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 Films
               </a>
             </Link>
           </li>
           <li className="mr-6 hidden lg:inline-block">
-            <Link href="/latest">
+            <Link href="/">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 New & Popular
               </a>
             </Link>
           </li>
-          <li className="hidden lg:inline-block">
-            <Link href="/my-list">
+          <li className="mr-6 hidden lg:inline-block">
+            <Link href="/">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 My List
+              </a>
+            </Link>
+          </li>
+          <li className="hidden lg:inline-block">
+            <Link href="/">
+              <a className="hover:text-gray-400 transition-all ease-linear duration-500">
+                Browse by languages
               </a>
             </Link>
           </li>
