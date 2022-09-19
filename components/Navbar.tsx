@@ -29,9 +29,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="px-16 py-6 text-white flex flex-row w-full bg-gradient-to-b from-netflixBackground hover:bg-netflixBackground items-center fixed z-20 transition-all ease duration-500">
+      <nav className="px-6 lg:px-16 py-6 text-white flex flex-row w-full bg-gradient-to-b from-netflixBackground hover:bg-netflixBackground items-center fixed z-20 transition-all ease duration-500">
         <ul className="flex flex-row text-sm font-light">
-          <li className="mr-10 -mt-[2px]">
+          <li className="mr-4 lg:mr-10 -mt-[2px]">
             <Link href="/">
               <a>
                 <Image
@@ -44,35 +44,63 @@ export default function Navbar() {
             </Link>
           </li>
 
-          <li className="mr-6">
+          <li className="group text-sm lg:hidden flex">
+            Browse
+            <MdArrowDropDown className="text-white text-2xl -mt-[2px] lg:hidden" />
+            <div className="group invisible group-hover:visible text-center absolute w-44 top-16 bg-black/90 border border-gray-500/50 left-6 text-white transition-all duration-200">
+              <ul className="text-md w-full py-2">
+                <li className="my-2">
+                  <a className="font-medium hover:text-gray-400 transition-all">
+                    Home
+                  </a>
+                </li>
+                <li className="my-2">
+                  <a className="hover:text-gray-400 transition-all">Series</a>
+                </li>
+                <li className="my-2">
+                  <a className="hover:text-gray-400 transition-all">Films</a>
+                </li>
+                <li className="my-2">
+                  <a className="hover:text-gray-400 transition-all">
+                    New & Popular
+                  </a>
+                </li>
+                <li className="my-2">
+                  <a className="hover:text-gray-400 transition-all">My List</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li className="mr-6 hidden lg:inline-block">
             <Link href="/">
               <a className="font-medium hover:text-gray-400 transition-all ease-linear duration-500">
                 Home
               </a>
             </Link>
           </li>
-          <li className="mr-6">
+          <li className="mr-6 hidden lg:inline-block">
             <Link href="/series">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 Series
               </a>
             </Link>
           </li>
-          <li className="mr-6">
+          <li className="mr-6 hidden lg:inline-block">
             <Link href="/films">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 Films
               </a>
             </Link>
           </li>
-          <li className="mr-6">
+          <li className="mr-6 hidden lg:inline-block">
             <Link href="/latest">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 New & Popular
               </a>
             </Link>
           </li>
-          <li>
+          <li className="hidden lg:inline-block">
             <Link href="/my-list">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 My List
@@ -81,7 +109,7 @@ export default function Navbar() {
           </li>
         </ul>
         <ul className="flex flex-row text-sm font-light mr-0 ml-auto items-center -mt-2">
-          <li className="mr-6">
+          <li className="mr-3 lg:mr-6">
             <Link href="">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 <svg
@@ -102,14 +130,14 @@ export default function Navbar() {
               </a>
             </Link>
           </li>
-          <li className="mr-6">
+          <li className="mr-6 hidden lg:inline-block">
             <Link href="">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 Children
               </a>
             </Link>
           </li>
-          <li className="mr-6">
+          <li className="mr-3 lg:mr-6">
             <Link href="">
               <a className="hover:text-gray-400 transition-all ease-linear duration-500">
                 <svg
@@ -139,9 +167,9 @@ export default function Navbar() {
                     src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
                     alt=""
                   />
-                  <MdArrowDropDown className="text-white text-2xl ml-1" />
+                  <MdArrowDropDown className="text-white text-2xl ml-1 hidden lg:inline-block" />
                 </div>
-                <div className="group invisible group-hover:visible absolute w-60 top-16 bg-black/90 border border-gray-500/50 right-16 text-white transition-all duration-200">
+                <div className="group invisible group-hover:visible absolute w-60 top-16 bg-black/90 border border-gray-500/50 right-6 lg:right-16 text-white transition-all duration-200">
                   <ul className="text-sm w-full px-4 py-2">
                     <li className="my-2">
                       <a className="hover:underline flex items-center">
