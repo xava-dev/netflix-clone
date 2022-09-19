@@ -10,6 +10,9 @@ module.exports = {
         netflix: "#e50914",
         netflixBackground: "#141414",
       },
+      backgroundImage: {
+        signInBackground: "",
+      },
     },
   },
   plugins: [],

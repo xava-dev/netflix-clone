@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Home - Netflix</title>
-        <meta name="description" content="NNetflix clone built with Next JS" />
+        <meta name="description" content="Netflix clone built with Next JS" />
         <link rel="icon" href="/netflix-favicon.svg" />
       </Head>
       <main>
@@ -18,7 +18,6 @@ const Home: NextPage = () => {
           imgUrl="/static/thewitcher-banner.webp"
         />
       </main>
-      s
     </>
   );
 };
