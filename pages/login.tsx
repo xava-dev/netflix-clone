@@ -91,7 +91,6 @@ const Login: NextPage = () => {
           </div>
           <div className="text-center bg-black/75 mt-20 w-80 md:w-96 h-1/3 mx-auto text-white py-14">
             <h1 className="text-4xl font-medium pb-8">Sign In</h1>
-
             <input
               type="email"
               placeholder="name@email.com"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { MdArrowDropDown } from "react-icons/md";
 
 export default function Navbar() {
   const [didToken, setDidToken] = useState("");
@@ -30,13 +31,13 @@ export default function Navbar() {
     <>
       <nav className="px-16 py-6 text-white flex flex-row w-full bg-gradient-to-b from-netflixBackground hover:bg-netflixBackground items-center fixed z-20 transition-all ease duration-500">
         <ul className="flex flex-row text-sm font-light">
-          <li className="mr-10">
+          <li className="mr-10 -mt-[2px]">
             <Link href="/">
               <a>
                 <Image
                   src="/netflix.svg"
-                  width={90}
-                  height={24}
+                  width={93}
+                  height={26}
                   alt="Netflix logo"
                 />
               </a>
@@ -131,12 +132,15 @@ export default function Navbar() {
           </li>
           <li>
             <Link href="">
-              <a className="group hover:text-gray-400 transition-all ease-linear duration-500">
-                <img
-                  className="profile-icon"
-                  src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
-                  alt=""
-                />
+              <a className="group transition-all ease-linear duration-500">
+                <div className="flex items-center">
+                  <img
+                    className="profile-icon"
+                    src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
+                    alt=""
+                  />
+                  <MdArrowDropDown className="text-white text-2xl ml-1" />
+                </div>
                 <div className="group invisible group-hover:visible absolute w-60 top-16 bg-black/90 border border-gray-500/50 right-16 text-white transition-all duration-200">
                   <ul className="text-sm w-full px-4 py-2">
                     <li className="my-2">
