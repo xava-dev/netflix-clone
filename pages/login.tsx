@@ -83,13 +83,13 @@ const Login: NextPage = () => {
         <div className="bg-black/50 h-screen">
           <div className="text-center lg:text-left lg:ml-16 pt-6">
             <Image
-              src="/netflix-logo.png"
-              width={166}
-              height={45}
+              src="/netflix.svg"
+              width={170}
+              height={46}
               alt="Netflix logo"
             />
           </div>
-          <div className="text-center bg-black/75 mx-6 mt-20 lg:w-1/4 h-1/2 lg:mx-auto text-white py-16">
+          <div className="text-center bg-black/75 mt-20 w-80 md:w-96 h-1/3 mx-auto text-white py-14">
             <h1 className="text-4xl font-medium pb-8">Sign In</h1>
 
             <input

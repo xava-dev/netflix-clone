@@ -34,8 +34,8 @@ export default function Navbar() {
             <Link href="/">
               <a>
                 <Image
-                  src="/netflix-logo.png"
-                  width={92}
+                  src="/netflix.svg"
+                  width={90}
                   height={24}
                   alt="Netflix logo"
                 />
