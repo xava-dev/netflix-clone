@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export default function Navbar() {
   return (
     <>
-      <nav className="px-16 py-6 text-white flex flex-row w-full bg-netflixBackground items-center">
+      <nav className="px-16 py-6 text-white flex flex-row w-full bg-gradient-to-b from-netflixBackground hover:bg-netflixBackground items-center fixed z-20 transition-all ease duration-500">
         <ul className="flex flex-row text-sm font-light">
           <li className="mr-10">
             <Link href="/">

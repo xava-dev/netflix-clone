@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import { NextPage } from "next";
+import Banner from "../components/Banner";
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +12,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/netflix-favicon.svg" />
       </Head>
       <main>
-        <Header />
+        <Navbar />
+        <Banner
+          title="/static/thewitcher-title.webp"
+          imgUrl="/static/thewitcher-banner.webp"
+        />
       </main>
+      s
     </>
   );
 };
