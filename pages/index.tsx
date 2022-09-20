@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import { NextPage } from "next";
 import Banner from "../components/Banner";
+import CardSection from "../components/CardSection";
 
 const Home: NextPage = () => {
   return (
@@ -12,11 +13,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/netflix-favicon.svg" />
       </Head>
       <main>
-        <Navbar />
-        <Banner
-          title="/static/thewitcher-title.webp"
-          imgUrl="/static/thewitcher-banner.webp"
-        />
+        <div className="h-screen -mb-60">
+          <Navbar />
+          <Banner
+            title="/static/thewitcher-title.webp"
+            imgUrl="/static/witcher-banner.jpeg"
+          />
+        </div>
+        <CardSection title="Now Trending" />
+        <CardSection />
       </main>
     </>
   );

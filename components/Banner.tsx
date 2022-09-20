@@ -8,7 +8,7 @@ export default function Banner(props: any) {
     <>
       <div className="absolute w-full h-5/6 z-0">
         <div className="relative bg-gradient-to-t h-full from-netflixBackground z-10"></div>
-        <div className="fixed z-20 top-72 left-6 lg:left-16 flex flex-col">
+        <div className="absolute z-20 top-72 left-6 lg:left-16 flex flex-col">
           <span className="lg:hidden">
             <Image src={title} width={250} height={100} alt="" />
           </span>
