@@ -1,4 +1,4 @@
-<img width="1637" alt="screenshot-netflix-clone" src="https://user-images.githubusercontent.com/104568148/191012475-25a181dd-b364-4cd6-9823-8b2f23591f4a.png">
+<img width="1629" alt="Schermafbeelding 2022-09-20 om 22 24 48" src="https://user-images.githubusercontent.com/104568148/191357572-a0f5c631-92e7-4239-a910-fced0d68763a.png">
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
