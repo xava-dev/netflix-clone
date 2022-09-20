@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdArrowDropDown } from "react-icons/md";
 
 export default function Navbar() {
+  const useScrollPosition = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+      const updatePosition = () => {
+        setScrollPosition(window.pageYOffset);
+      };
+
+      window.addEventListener("scroll", updatePosition);
+
+      updatePosition();
+
+      return () => window.removeEventListener("scroll", updatePosition);
+    }, []);
+
+    return scrollPosition;
+  };
+
+  const scrollPosition = useScrollPosition();
   const [didToken, setDidToken] = useState("");
   const router = useRouter();
 
@@ -29,7 +48,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="px-6 lg:px-16 py-6 text-white flex flex-row w-full bg-gradient-to-b from-netflixBackground hover:bg-netflixBackground items-center fixed z-20 transition-all ease duration-500">
+      <nav
+        className={`px-6 lg:px-16 pt-6 pb-4 text-white flex flex-row w-full items-center fixed z-20 transition-all ease-in-out duration-500 ${
+          scrollPosition > 0
+            ? "bg-netflixBackground"
+            : "bg-gradient-to-b from-netflixBackground"
+        }`}
+      >
         <ul className="flex flex-row text-sm font-light">
           <li className="mr-4 lg:mr-10 -mt-[2px]">
             <Link href="/">
