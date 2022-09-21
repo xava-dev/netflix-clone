@@ -41,25 +41,18 @@ export default function Navbar() {
   };
 
   const scrollPosition = useScrollPosition();
-  const [didToken, setDidToken] = useState("");
   const router = useRouter();
 
-  const handleSignOut = async (e: any) => {
+  const handleSignOut = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/logout", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${didToken}`,
-          "Content-Type": "application/json",
-        },
-      });
-
-      const res = await response.json();
+      await magic.user.logout();
+      console.log(await magic.user.isLoggedIn());
+      router.push("/login");
     } catch (error) {
       console.error("Error logging out", error);
-      await router.push("/login");
+      router.push("/login");
     }
   };
 
