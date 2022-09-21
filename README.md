@@ -1,4 +1,4 @@
-<img width="1629" alt="Schermafbeelding 2022-09-20 om 22 24 48" src="https://user-images.githubusercontent.com/104568148/191357572-a0f5c631-92e7-4239-a910-fced0d68763a.png">
+<img width="1636" alt="Schermafbeelding 2022-09-21 om 12 12 18" src="https://user-images.githubusercontent.com/104568148/191478539-b69c3926-2388-49e3-aeb5-5d8c557d979f.png">
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
