@@ -42,7 +42,7 @@ export default function Navbar() {
       const res = await response.json();
     } catch (error) {
       console.error("Error logging out", error);
-      router.push("/login");
+      await router.push("/login");
     }
   };
 

@@ -16,7 +16,7 @@ export default function Banner(props: any) {
             <Image src={title} width={500} height={200} alt="" />
           </span>
           <div className="mt-4 lg:mt-12 flex flex-row w-fit">
-            <button className="ml-0 mr-auto bg-white hover:bg-white/50 py-1 px-4 text-sm lg:py-3 lg:px-8 lg:text-xl font-medium rounded-md flex items-center">
+            <button className="ml-0 mr-auto bg-white hover:bg-white/50 py-1 px-4 text-sm lg:py-3 lg:px-8 lg:text-xl font-medium rounded-md flex items-center transition-all duration-200">
               <svg
                 width="24"
                 height="24"
@@ -32,7 +32,7 @@ export default function Banner(props: any) {
               </svg>
               Play
             </button>
-            <button className="ml-3 lg:ml-6 bg-white/25 hover:bg-white/10 text-white py-1 px-4 text-sm lg:py-3 lg:px-8 lg:text-xl font-medium rounded-md flex items-center">
+            <button className="ml-3 lg:ml-6 bg-white/25 hover:bg-white/10 text-white py-1 px-4 text-sm lg:py-3 lg:px-8 lg:text-xl font-medium rounded-md flex items-center transition-all duration-200">
               <svg
                 width="24"
                 height="24"
