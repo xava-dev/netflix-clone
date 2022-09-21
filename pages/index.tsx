@@ -13,14 +13,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/netflix-favicon.svg" />
       </Head>
       <main>
-        <div className="h-screen -mb-60">
+        <div className="h-screen -mb-96 lg:-mb-60">
           <Navbar />
           <Banner
             title="/static/thewitcher-title.webp"
             imgUrl="/static/witcher-banner.jpeg"
           />
         </div>
-        <CardSection title="Now Trending" />
+        <CardSection title="Trending Now" />
         <CardSection />
       </main>
     </>

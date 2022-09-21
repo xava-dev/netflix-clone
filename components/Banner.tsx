@@ -6,16 +6,13 @@ export default function Banner(props: any) {
 
   return (
     <>
-      <div className="absolute w-full h-5/6 z-0">
+      <div className="absolute w-full h-2/3 lg:h-5/6 z-0">
         <div className="relative bg-gradient-to-t h-full from-netflixBackground z-10"></div>
-        <div className="absolute z-20 top-72 left-6 lg:left-16 flex flex-col">
-          <span className="lg:hidden">
-            <Image src={title} width={250} height={100} alt="" />
-          </span>
-          <span className="hidden lg:block">
+        <div className="absolute z-20 bottom-28 lg:top-72 lg:left-16 flex flex-col">
+          <span className="mx-6 lg:mx-0">
             <Image src={title} width={500} height={200} alt="" />
           </span>
-          <div className="mt-4 lg:mt-12 flex flex-row w-fit">
+          <div className="mt-4 lg:mt-12 flex flex-row w-fit mx-auto lg:mx-0">
             <button className="ml-0 mr-auto bg-white hover:bg-white/50 py-1 px-4 text-sm lg:py-3 lg:px-8 lg:text-xl font-medium rounded-md flex items-center transition-all duration-200">
               <svg
                 width="24"
