@@ -17,7 +17,7 @@ const Card = (props: any) => {
   };
 
   return (
-    <div className="group w-1/6 mx-1 h-36 relative first:hover:ml-16 first:hover:-mr-14 last:hover:mr-16 last:hover:-ml-14 hover:scale-150 z-10 hover:-mt-20 hover:z-40 hover:drop-shadow-[0_0_30px_rgba(0,0,0,1)] transition-all ease-out duration-200 hover:ease-in hover:delay-300">
+    <div className="group lg:w-1/6 mx-1 h-40 lg:h-36 relative first:hover:ml-3 first:hover:-mr-1 last:hover:mr-3 last:hover:-ml-1 lg:first:hover:ml-16 lg:first:hover:-mr-14 lg:last:hover:mr-16 lg:last:hover:-ml-14 hover:scale-150 z-10 hover:-mt-20 hover:z-40 hover:drop-shadow-[0_0_30px_rgba(0,0,0,1)] transition-all ease-out duration-200 hover:ease-in hover:delay-300">
       <div className="cursor-pointer w-full max-h-36">
         <Image
           src={imgSrc}
@@ -25,20 +25,20 @@ const Card = (props: any) => {
           layout="fill"
           objectFit="cover"
           onError={handleOnError}
-          className="rounded-md group-hover:rounded-t-md group-hover:rounded-b-none"
+          className="rounded group-hover:rounded-t group-hover:rounded-b-none"
         />
       </div>
-      <div className="relative z-40 p-3 invisible group-hover:visible rounded-b-md mt-36 bg-netflixBackground h-15 text-white group-hover:delay-300">
+      <div className="relative z-40 p-3 invisible group-hover:visible rounded-b-md mt-40 lg:mt-36 bg-netflixBackground h-15 text-white group-hover:delay-300">
         <div className="flex flex-row items-center">
           <button>
-            <div className="bg-white border-2 border-white hover:bg-white/50 hover:border-transparent p-1 rounded-full transition-all duration-200">
+            <div className="bg-white border-2 border-white hover:bg-white/50 hover:border-transparent lg:p-1 rounded-full transition-all duration-200">
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-black scale-75"
+                className="text-black scale-50 lg:scale-75"
               >
                 <path
                   d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z"
@@ -48,14 +48,14 @@ const Card = (props: any) => {
             </div>
           </button>
           <button>
-            <div className="ml-2 border-2 bg-netflixBackground/50 border-gray-500/75 hover:border-white p-1 rounded-full transition-all duration-200">
+            <div className="mx-1 lg:ml-2 border-2 bg-netflixBackground/50 border-gray-500/75 hover:border-white lg:p-1 rounded-full transition-all duration-200">
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-white scale-75"
+                className="text-white scale-50 lg:scale-75"
               >
                 <path
                   fillRule="evenodd"
@@ -67,14 +67,14 @@ const Card = (props: any) => {
             </div>
           </button>
           <button className="w-fit ml-auto mr-0">
-            <div className="border-2 bg-netflixBackground/50 border-gray-500/75 hover:border-white p-1 rounded-full transition-all duration-200">
+            <div className="border-2 bg-netflixBackground/50 border-gray-500/75 hover:border-white lg:p-1 rounded-full transition-all duration-200">
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-white scale-75"
+                className="text-white scale-50 lg:scale-75"
               >
                 <path
                   fillRule="evenodd"
