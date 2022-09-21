@@ -43,16 +43,16 @@ export default function Navbar() {
   const scrollPosition = useScrollPosition();
   const router = useRouter();
 
-  const handleSignOut = async (e) => {
+  const handleSignOut = async (e: any) => {
     e.preventDefault();
 
     try {
       await magic.user.logout();
       console.log(await magic.user.isLoggedIn());
-      router.push("/login");
+      await router.push("/login");
     } catch (error) {
       console.error("Error logging out", error);
-      router.push("/login");
+      await router.push("/login");
     }
   };
 

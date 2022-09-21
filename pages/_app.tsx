@@ -13,10 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       const isLoggedIn = await magic.user.isLoggedIn();
       if (isLoggedIn) {
         // route to /
-        router.push("/");
+        await router.push("/");
       } else {
         // route to /login
-        router.push("/login");
+        await router.push("/login");
       }
     };
     handleLoggedIn();
