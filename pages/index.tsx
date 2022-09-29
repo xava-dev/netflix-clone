@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { NextPage } from "next";
 import Banner from "../components/Banner";
 import CardSection from "../components/CardSection";
-let videoData = require("../data/videos.json");
+let videoData = require("data/videos.json");
 
 const getVideos = () => {
   return videoData.items.map((item: any) => {
