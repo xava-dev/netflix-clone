@@ -17,7 +17,7 @@ const Card = (props: any) => {
   };
 
   return (
-    <div className="group w-full mx-1 h-40 lg:h-36 relative first:hover:ml-6 first:hover:-mr-4 last:hover:mr-6 last:hover:-ml-4 lg:first:hover:ml-16 lg:first:hover:-mr-14 lg:last:hover:mr-16 lg:last:hover:-ml-14 hover:scale-150 z-10 hover:-mt-20 hover:z-40 hover:drop-shadow-[0_0_30px_rgba(0,0,0,1)] transition-all ease-out duration-200 hover:ease-in hover:delay-300">
+    <div className="group h-40 lg:h-36 relative first:hover:ml-6 first:hover:-mr-4 last:hover:mr-6 last:hover:-ml-4 lg:first:hover:ml-16 lg:first:hover:-mr-14 lg:last:hover:mr-16 lg:last:hover:-ml-14 hover:scale-150 z-10 hover:-mt-20 hover:z-40 hover:drop-shadow-[0_0_30px_rgba(0,0,0,1)] transition-all ease-out duration-200 hover:ease-in hover:delay-300">
       <div className="cursor-pointer w-full max-h-36">
         <Image
           src={imgSrc}

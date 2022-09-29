@@ -7,8 +7,8 @@ export default function CardSection(props: any) {
       <h2 className="text-md lg:text-2xl text-[#e5e5e5] font-medium ml-1 lg:ml-2 mb-1 lg:mb-3">
         {title}
       </h2>
-      <div className="flex flex-row">
-        {videos.map((video: { imgUrl: string }, index: number) => {
+      <div className="grid grid-flow-col grid-rows-1 gap-2">
+        {videos.slice(0, 6).map((video: { imgUrl: string }, index: string) => {
           return (
             <Card key={index} id={index} imgUrl={video.imgUrl} size={size} />
           );
