@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       }
     };
     handleLoggedIn();
-  }, []);
+  });
 
   useEffect(() => {
     const handleComplete = () => {
