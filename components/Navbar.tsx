@@ -3,8 +3,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdArrowDropDown } from "react-icons/md";
+import { magic } from "../lib/magic-client";
 
 export default function Navbar() {
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    async function getUsername() {
+      try {
+        const { email } = await magic.user.getMetadata();
+        if (email) {
+          setUsername(email);
+        }
+      } catch (error) {
+        console.log("Error retrieving email:", error);
+      }
+    }
+    getUsername();
+  }, []);
+
   const useScrollPosition = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -24,22 +41,15 @@ export default function Navbar() {
   };
 
   const scrollPosition = useScrollPosition();
-  const [didToken, setDidToken] = useState("");
   const router = useRouter();
 
   const handleSignOut = async (e: any) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/logout", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${didToken}`,
-          "Content-Type": "application/json",
-        },
-      });
-
-      const res = await response.json();
+      await magic.user.logout();
+      console.log(await magic.user.isLoggedIn());
+      await router.push("/login");
     } catch (error) {
       console.error("Error logging out", error);
       await router.push("/login");
@@ -200,15 +210,25 @@ export default function Navbar() {
               <a className="group transition-all ease-linear duration-500">
                 <div className="flex items-center">
                   <img
-                    className="profile-icon"
+                    className="profile-icon rounded"
                     src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
                     alt=""
                   />
                   <MdArrowDropDown className="text-white text-2xl ml-1 hidden lg:inline-block" />
                 </div>
-                <div className="group invisible group-hover:visible absolute w-60 top-16 bg-black/90 border border-gray-500/50 right-6 lg:right-16 text-white transition-all duration-200">
-                  <ul className="text-sm w-full px-4 py-2">
+                <div className="group invisible group-hover:visible absolute min-w-60 w-fit top-16 bg-black/90 border border-gray-500/50 right-6 lg:right-16 text-white transition-all duration-200">
+                  <ul className="text-sm w-full px-4 py-2 flex flex-col items-start">
                     <li className="my-2">
+                      <a className="hover:underline flex items-center">
+                        <img
+                          className="mr-3 rounded"
+                          src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
+                          alt=""
+                        />
+                        {username}
+                      </a>
+                    </li>
+                    <li className="my-2 ml-1">
                       <a className="hover:underline flex items-center">
                         <svg
                           width="24"
@@ -228,7 +248,7 @@ export default function Navbar() {
                         Manage Profiles
                       </a>
                     </li>
-                    <li className="my-2">
+                    <li className="my-2 ml-1">
                       <a className="hover:underline flex items-center">
                         <svg
                           width="24"
@@ -248,7 +268,7 @@ export default function Navbar() {
                         Account
                       </a>
                     </li>
-                    <li className="my-2">
+                    <li className="my-2 ml-1">
                       <a className="hover:underline flex items-center">
                         <svg
                           width="24"

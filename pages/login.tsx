@@ -23,7 +23,7 @@ const Login: NextPage = () => {
       router.events.off("routeChangeComplete", handleComplete);
       router.events.off("routeChangeError", handleComplete);
     };
-  }, [router]);
+  }, []);
 
   const handleOnChangeEmail = (e: any) => {
     setUserMsg("");
@@ -89,7 +89,7 @@ const Login: NextPage = () => {
               alt="Netflix logo"
             />
           </div>
-          <div className="text-center bg-black/75 mt-20 w-80 md:w-96 h-1/3 mx-auto text-white py-14">
+          <div className="text-center bg-black/75 mt-20 w-80 md:w-96 h-1/2 lg:h-1/3 mx-auto text-white py-14">
             <h1 className="text-4xl font-medium pb-8">Sign In</h1>
             <input
               type="email"
