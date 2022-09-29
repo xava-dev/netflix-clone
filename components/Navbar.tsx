@@ -209,10 +209,12 @@ export default function Navbar() {
             <Link href="">
               <a className="group transition-all ease-linear duration-500">
                 <div className="flex items-center">
-                  <img
+                  <Image
                     className="profile-icon rounded"
                     src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
                     alt=""
+                    width={30}
+                    height={30}
                   />
                   <MdArrowDropDown className="text-white text-2xl ml-1 hidden lg:inline-block" />
                 </div>
@@ -220,10 +222,12 @@ export default function Navbar() {
                   <ul className="text-sm w-full px-4 py-2 flex flex-col items-start">
                     <li className="my-2">
                       <a className="hover:underline flex items-center">
-                        <img
+                        <Image
                           className="mr-3 rounded"
                           src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
                           alt=""
+                          width={30}
+                          height={30}
                         />
                         {username}
                       </a>
