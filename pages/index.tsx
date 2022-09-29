@@ -6,7 +6,7 @@ import CardSection from "../components/CardSection";
 import { getVideos } from "../lib/videos";
 
 const Home: NextPage = () => {
-  const someVideos = getVideos();
+  const videos = getVideos();
 
   return (
     <>
@@ -23,8 +23,8 @@ const Home: NextPage = () => {
             imgUrl="/static/witcher-banner.jpeg"
           />
         </div>
-        <CardSection title="Trending Now" videos={someVideos} size="large" />
-        <CardSection title="Recently Added" videos={someVideos} size="large" />
+        <CardSection title="Trending Now" videos={videos} size="large" />
+        <CardSection title="Recently Added" videos={videos} size="large" />
       </main>
     </>
   );
