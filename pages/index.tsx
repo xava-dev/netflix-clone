@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar";
 import { NextPage } from "next";
 import Banner from "../components/Banner";
 import CardSection from "../components/CardSection";
-import { items } from "../data/videos.json";
+let videoData = require("../data/videos.json");
 
 const getVideos = () => {
-  return items.map((item) => {
+  return videoData.items.map((item: any) => {
     return {
       title: item.snippet.title,
       imgUrl: item.snippet.thumbnails.high.url,
