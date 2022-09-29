@@ -223,13 +223,13 @@ export default function Navbar() {
                     <li className="my-2">
                       <a className="hover:underline flex items-center">
                         <Image
-                          className="mr-3 rounded"
+                          className="rounded"
                           src="https://occ-0-513-41.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e"
                           alt=""
                           width={30}
                           height={30}
                         />
-                        {username}
+                        <span className="ml-3">{username}</span>
                       </a>
                     </li>
                     <li className="my-2 ml-1">
