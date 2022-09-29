@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar";
 import { NextPage } from "next";
 import Banner from "../components/Banner";
 import CardSection from "../components/CardSection";
-import { getVideos } from "../lib/videos";
+import getVideos from "../lib/videos";
 
 const Home: NextPage = () => {
-  const videos = getVideos();
+  const videos = getVideos;
 
   return (
     <>
