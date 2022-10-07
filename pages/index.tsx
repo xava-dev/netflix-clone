@@ -3,21 +3,15 @@ import Navbar from "../components/Navbar";
 import { NextPage } from "next";
 import Banner from "../components/Banner";
 import CardSection from "../components/CardSection";
-let videoData = require("data/videos.json");
+import { getVideos } from "../lib/videos";
 
-const getVideos = () => {
-  return videoData.items.map((item: any) => {
-    return {
-      title: item.snippet.title,
-      imgUrl: item.snippet.thumbnails.high.url,
-      id: item?.id?.videoId,
-    };
-  });
-};
+export async function getServerSideProps(context: any) {
+  const mainVideos = await getVideos();
+  return { props: { mainVideos } };
+}
 
-const Home: NextPage = () => {
-  const videos = getVideos();
-
+// @ts-ignore
+const Home: NextPage = ({ mainVideos }) => {
   return (
     <>
       <Head>
@@ -33,8 +27,8 @@ const Home: NextPage = () => {
             imgUrl="/static/witcher-banner.jpeg"
           />
         </div>
-        <CardSection title="Trending Now" videos={videos} size="large" />
-        <CardSection title="Recently Added" videos={videos} size="large" />
+        <CardSection title="Trending Now" videos={mainVideos} />
+        <CardSection title="Recently Added" videos={mainVideos} />
       </main>
     </>
   );
