@@ -3,8 +3,15 @@ import Navbar from "../components/Navbar";
 import { NextPage } from "next";
 import Banner from "../components/Banner";
 import CardSection from "../components/CardSection";
+import { getVideos } from "../lib/videos";
 
-const Home: NextPage = () => {
+export async function getServerSideProps(context: any) {
+  const mainVideos = await getVideos();
+  return { props: { mainVideos } };
+}
+
+// @ts-ignore
+const Home: NextPage = ({ mainVideos }) => {
   return (
     <>
       <Head>
@@ -20,8 +27,8 @@ const Home: NextPage = () => {
             imgUrl="/static/witcher-banner.jpeg"
           />
         </div>
-        <CardSection title="Trending Now" />
-        <CardSection />
+        <CardSection title="Trending Now" videos={mainVideos} />
+        <CardSection title="Recently Added" videos={mainVideos} />
       </main>
     </>
   );
